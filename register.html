@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - TabNews Clone</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-    <div class="auth-container">
+    <header>
+        <div class="header-content">
+            <div class="logo">TabNews <span style="font-size:0.6em; color:var(--text-secondary)">Academic API</span></div>
+            <div style="flex:1"></div>
+            <button id="themeToggle" class="btn btn-outline" style="border:none;">
+                <i class="ph ph-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="auth-container" style="min-height: calc(100vh - 70px);">
         <div class="auth-box">
             <h2>Criar Conta</h2>
             <form id="registerForm">
@@ -26,7 +37,7 @@
                 </div>
                 <div id="errorMsg" class="error-msg hidden"></div>
                 
-                <button type="submit" class="full-btn">Cadastrar</button>
+                <button type="submit" class="btn btn-primary" style="width:100%">Registrar</button>
             </form>
             <p class="auth-footer">
                 Já tem conta? <a href="login.html">Faça login</a>
@@ -36,6 +47,12 @@
         </div>
     </div>
 
+    </div>
+
+    <script type="module">
+        import { Theme } from './js/theme.js';
+        document.addEventListener('DOMContentLoaded', () => Theme.init());
+    </script>
     <script type="module" src="js/register.js"></script>
 </body>
 </html>

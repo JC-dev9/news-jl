@@ -24,7 +24,14 @@ async function handleRegister(e) {
         alert('Cadastro realizado com sucesso! Faça login.');
         window.location.href = 'login.html';
     } catch (error) {
-        errorMsg.textContent = 'Erro: ' + error.message;
+        console.error(error);
+        if (error.message.includes('rate limit')) {
+            errorMsg.textContent = 'Muitas tentativas. Tente novamente em alguns minutos.';
+        } else if (error.message.includes('already registered')) {
+            errorMsg.textContent = 'Este email já está cadastrado.';
+        } else {
+            errorMsg.textContent = 'Erro ao cadastrar: ' + error.message;
+        }
         errorMsg.classList.remove('hidden');
     }
 }

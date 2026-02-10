@@ -16,7 +16,12 @@ async function handleLogin(e) {
         if (error) throw error;
         window.location.href = 'index.html';
     } catch (error) {
-        errorMsg.textContent = 'Erro: ' + error.message;
+        console.error(error);
+        if (error.message.includes('Invalid login credentials')) {
+            errorMsg.textContent = 'Email ou senha incorretos.';
+        } else {
+            errorMsg.textContent = 'Erro ao entrar: ' + error.message;
+        }
         errorMsg.classList.remove('hidden');
     }
 }

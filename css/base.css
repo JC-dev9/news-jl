@@ -1,0 +1,24 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    color: var(--text-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--text-accent-hover);
+}
+
+.hidden {
+    display: none !important;
+}
+
+button {
+    font-family: inherit;
+}

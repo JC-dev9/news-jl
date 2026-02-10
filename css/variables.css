@@ -1,0 +1,49 @@
+:root {
+    /* Colors - Light (Default) */
+    --bg-body: #fcfcfc;
+    --bg-card: #ffffff;
+    --bg-header: #ffffff;
+    --bg-input: #ffffff;
+    --bg-hover: #f3f4f6;
+    --bg-badge: #eff6ff;
+
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-accent: #2563eb;
+    --text-accent-hover: #1d4ed8;
+
+    --border-color: #e5e7eb;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+    /* Actions */
+    --btn-primary-bg: #2563eb;
+    --btn-primary-text: #ffffff;
+    --btn-secondary-bg: #0d0d0d;
+    --btn-secondary-text: #ffffff;
+}
+
+[data-theme="dark"] {
+    /* Colors - Dark */
+    --bg-body: #111827;
+    --bg-card: #1f2937;
+    --bg-header: #1f2937;
+    --bg-input: #374151;
+    --bg-hover: #374151;
+    --bg-badge: #1e3a8a;
+
+    --text-primary: #f9fafb;
+    --text-secondary: #9ca3af;
+    --text-accent: #60a5fa;
+    --text-accent-hover: #93c5fd;
+
+    --border-color: #374151;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+
+    /* Actions */
+    --btn-primary-bg: #3b82f6;
+    --btn-primary-text: #ffffff;
+    --btn-secondary-bg: #f3f4f6;
+    --btn-secondary-text: #1f2937;
+}

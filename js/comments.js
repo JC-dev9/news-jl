@@ -44,6 +44,7 @@ export const Comments = {
         const { data, error } = await Auth.client.from('comments').insert({
             content: content,
             user_id: user.id,
+            user_email: user.email,
             article_slug: slug,
             parent_id: parentId
         });

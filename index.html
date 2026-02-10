@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TabNews Clone - RC06</title>
-    <link rel="stylesheet" href="style.css">
+    <title>News JL - Academic</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    
 </head>
 <body>
 
     <header>
         <div class="header-content">
-            <div class="logo">TabNews <span style="font-size:0.6em; color:#888">Academic API</span></div>
+            <div class="logo">News JL <span style="font-size:0.6em; color:var(--text-secondary)">Academic</span></div>
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Filtrar conteúdos (ex: AI, Python)...">
-                <button onclick="filterContent()">Filtrar</button>
+                <input type="text" id="searchInput" placeholder="Filtrar..." style="width: 200px;">
+                <button id="searchBtn" class="btn btn-outline"><i class="ph ph-magnifying-glass"></i></button>
             </div>
-            <div id="userSection">
-                <!-- Injetado via JS: Botão de Login ou Avatar -->
-                <button onclick="login()" class="login-btn">Entrar</button>
+            <div id="userSection" style="display:flex; gap:10px; align-items:center;">
+                <!-- Injetado via JS -->
             </div>
+            <button id="themeToggle" class="btn btn-outline" style="margin-left: 10px; border:none;">
+                <i class="ph ph-moon"></i>
+            </button>
         </div>
     </header>
 
@@ -31,7 +33,7 @@
         </section>
 
         <section id="detailsArea" class="details-view hidden">
-            <button onclick="closeDetails()" class="back-btn">← Voltar para a lista</button>
+            <button id="backBtn" class="back-btn btn btn-outline"><i class="ph ph-arrow-left"></i> Voltar</button>
             <div id="articleContent" class="markdown-body">
             </div>
 
@@ -42,10 +44,10 @@
                 
                 <div id="commentFormArea" class="comment-box hidden">
                     <textarea id="commentInput" placeholder="Escreva seu comentário..."></textarea>
-                    <button onclick="postComment()" class="primary-btn">Comentar</button>
+                    <button id="postCommentBtn" class="btn btn-primary">Comentar</button>
                 </div>
-                <div id="loginWarning" class="hidden" style="margin-bottom:20px; color:#666;">
-                    <a href="#" onclick="login()" style="color:#2563eb">Faça login</a> para comentar.
+                <div id="loginWarning" class="hidden" style="margin-bottom:20px; color: var(--text-secondary);">
+                    <a href="login.html" style="color:var(--text-accent)">Faça login</a> para comentar.
                 </div>
 
                 <div id="commentsList">

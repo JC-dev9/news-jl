@@ -9,7 +9,8 @@ header {
     background-color: #fff;
     border-bottom: 1px solid #e2e8f0;
     padding: 15px 0;
-    position: sticky; /* Menu fixo no topo */
+    position: sticky;
+    /* Menu fixo no topo */
     top: 0;
     z-index: 100;
 }
@@ -71,7 +72,9 @@ header {
 }
 
 /* ÁREA DE DETALHES */
-.hidden { display: none; }
+.hidden {
+    display: none;
+}
 
 .details-view {
     background: #fff;
@@ -85,12 +88,14 @@ header {
     line-height: 1.7;
     font-size: 1.1rem;
 }
+
 .markdown-body pre {
     background: #f3f4f6;
     padding: 15px;
     border-radius: 5px;
     overflow-x: auto;
 }
+
 .markdown-body img {
     max-width: 100%;
     border-radius: 5px;
@@ -105,4 +110,211 @@ header {
     margin-bottom: 20px;
     font-weight: 600;
 }
-.back-btn:hover { background: #e5e7eb; }    
+
+.back-btn:hover {
+    background: #e5e7eb;
+}
+
+/* AUTH */
+.login-btn {
+    background-color: #0d0d0d;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background-color: #333;
+}
+
+.register-btn {
+    background-color: transparent;
+    color: #0d0d0d;
+    border: 1px solid #0d0d0d;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.register-btn:hover {
+    background-color: #f3f4f6;
+}
+
+.user-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+/* COMMENTS */
+.comment-box {
+    margin-bottom: 20px;
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.comment-box textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.primary-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.comment-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.comment-header {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-body {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+    white-space: pre-wrap;
+}
+
+.reply-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.reply-btn:hover {
+    text-decoration: underline;
+    color: #2563eb;
+}
+
+/* Threaded Replies */
+.replies-container {
+    margin-left: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #e5e7eb;
+    margin-top: 10px;
+}
+
+.reply-input-area {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+/* AUTH PAGES */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+}
+
+.auth-box {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.full-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.full-btn:hover {
+    background-color: #333;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.auth-footer a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.error-msg {
+    color: #ef4444;
+    background: #fef2f2;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+}

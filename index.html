@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TabNews Clone - RC06</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">TabNews <span style="font-size:0.6em; color:#888">Academic API</span></div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Filtrar conteúdos (ex: AI, Python)...">
+                <button onclick="filterContent()">Filtrar</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="resultsArea" class="results-list">
+            <p class="loading">Carregando conteúdos relevantes...</p>
+        </section>
+
+        <section id="detailsArea" class="details-view hidden">
+            <button onclick="closeDetails()" class="back-btn">← Voltar para a lista</button>
+            <div id="articleContent" class="markdown-body">
+                </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

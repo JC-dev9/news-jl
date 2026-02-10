@@ -1,0 +1,108 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fcfcfc;
+    color: #1f2937;
+    margin: 0;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 15px 0;
+    position: sticky; /* Menu fixo no topo */
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* CARDS DA LISTA */
+.card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+    color: #111;
+}
+
+.meta {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.tag-badge {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    margin-right: 5px;
+}
+
+/* ÁREA DE DETALHES */
+.hidden { display: none; }
+
+.details-view {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+/* Estilo para o Markdown convertido */
+.markdown-body {
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+.markdown-body pre {
+    background: #f3f4f6;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+.markdown-body img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.back-btn {
+    background: #f3f4f6;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.back-btn:hover { background: #e5e7eb; }    

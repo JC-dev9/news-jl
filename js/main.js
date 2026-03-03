@@ -8,7 +8,7 @@ import { Theme } from './theme.js';
 let allContents = [];
 let currentSlug = null;
 
-// Inicialização
+// Inicialização: Evento que corre quando o conteúdo do HTML (DOM) é totalmente carregado no browser
 window.addEventListener('DOMContentLoaded', async () => {
     Theme.init();
     await initAuthUI();
@@ -84,6 +84,7 @@ async function handleLogout() {
     window.location.reload();
 }
 
+// Função para buscar as notícias da API e as apresentar de imediato no ecrã principal
 async function loadNews() {
     const resultsArea = document.getElementById('resultsArea');
     resultsArea.innerHTML = '<p class="loading">Carregando conteúdos...</p>';
@@ -128,6 +129,7 @@ function renderList(items) {
     });
 }
 
+// Carrega um artigo na totalidade, oculta a vista em lista e apresenta a área de detalhes (Secção individual)
 async function loadFullArticle(username, slug) {
     currentSlug = slug;
     const resultsArea = document.getElementById('resultsArea');
@@ -172,6 +174,7 @@ function closeDetails() {
 
 // UI de Comentários
 
+// Função para carregar a estrutura de respostas/comentários e compilá-los na interface gráfica
 async function loadComments(slug) {
     const commentsList = document.getElementById('commentsList');
     try {
@@ -212,6 +215,7 @@ function renderCommentsRecursive(comments, container) {
     });
 }
 
+// Lógica para enviar um novo comentário principal (raiz) associado a um determinado artigo
 async function handlePostComment() {
     console.log('handlePostComment called');
     const input = document.getElementById('commentInput');

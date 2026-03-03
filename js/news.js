@@ -2,6 +2,7 @@ import { Utils } from './utils.js';
 import { CONFIG } from './config.js';
 
 export const News = {
+    // Busca os conteúdos da API do TabNews seguindo a estratégia 'relevant' ou 'new'
     async fetchNews(strategy = 'relevant', perPage = 50) {
         try {
             const response = await fetch(`${CONFIG.TABNEWS_API_BASE}?strategy=${strategy}&per_page=${perPage}`);
@@ -13,6 +14,7 @@ export const News = {
         }
     },
 
+    // Busca um artigo específico pelo username e pelo slug (identificador do post)
     async fetchArticle(username, slug) {
         try {
             const response = await fetch(`${CONFIG.TABNEWS_API_BASE}/${username}/${slug}`);
@@ -24,6 +26,7 @@ export const News = {
         }
     },
 
+    // Filtra localmente os artigos carregados consoante o input de pesquisa
     filter(articles, query) {
         if (!query) return articles;
         const lowerQuery = query.toLowerCase();

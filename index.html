@@ -11,6 +11,7 @@
 </head>
 <body>
 
+    <!-- Cabeçalho com o logótipo, barra de pesquisa por texto e área do utilizador (login/logout) -->
     <header>
         <div class="header-content">
             <div class="logo">News JL <span style="font-size:0.6em; color:var(--text-secondary)">Academic</span></div>
@@ -27,11 +28,14 @@
         </div>
     </header>
 
+    <!-- Área principal: alterna entre mostrar a lista de notícias e mostrar o artigo detalhado -->
     <main class="container">
+        <!-- Secção que exibe os cartões das notícias ao carregar a página e os resultados de pesquisa -->
         <section id="resultsArea" class="results-list">
             <p class="loading">Carregando conteúdos relevantes...</p>
         </section>
 
+        <!-- Secção que mostra o conteúdo integral de um artigo específico e os seus comentários (oculta por defeito) -->
         <section id="detailsArea" class="details-view hidden">
             <button id="backBtn" class="back-btn btn btn-outline"><i class="ph ph-arrow-left"></i> Voltar</button>
             <div id="articleContent" class="markdown-body">
